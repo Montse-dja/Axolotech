@@ -8,3 +8,14 @@ Hi! We are Monterrat, Azul, Alleine and Luis! We are a group of electronic engin
 - No authentication on the MQTT connection
 - Single device / single topic
 - GitHub Pages + local broker requires WSS or a tunnel (ngrok, Cloudflare Tunnel)
+
+##Bricks Used
+- Database - TimeSeries
+- WebUI - HTML
+- Video Object Detection
+
+## Sketch Libraries
+
+- OneWire 2.3.8
+- DallasTemperature 4.0.6
+- Arduino_RouterBridge 0.4.1
