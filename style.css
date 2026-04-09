@@ -334,5 +334,7 @@ html, body {
   height: 64px;
   object-fit: contain;
   margin-top: 12px;
+  background: transparent;
+  mix-blend-mode: screen;
 }
 .axolotl-icon.hidden { display: none; }
