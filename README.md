@@ -9,7 +9,7 @@ Hi! We are Monterrat, Azul, Alleine and Luis! We are a group of electronic engin
 - Single device / single topic
 - GitHub Pages + local broker requires WSS or a tunnel (ngrok, Cloudflare Tunnel)
 
-##Bricks Used
+## Bricks Used
 - Database - TimeSeries
 - WebUI - HTML
 - Video Object Detection
