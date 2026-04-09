@@ -1,6 +1,6 @@
 const CONFIG = {
   broker: {
-    host:     "ws://192.168.31.29",   // broker machine IP — change to wss:// for prod
+    host:     "ws://192.168.31.111",   // broker machine IP — change to wss:// for prod
     port:     9001,                    // WebSocket port on Mosquitto
     topic:    "arduino-sensors-data",  // must match exactly what Arduino publishes to
     clientId: "dashboard-" + Math.random().toString(16).slice(2),
