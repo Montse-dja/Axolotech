@@ -37,6 +37,7 @@ const App = (() => {
     chartPhRange: $("chart-ph-range"),
     chartTRange:  $("chart-temp-range"),
     log:          $("log"),
+    axolotlIcon:  $("axolotl-icon"),
   };
 
   // ── Chart setup ────────────────────────────────────────────
@@ -84,11 +85,11 @@ const App = (() => {
     data: {
       datasets: [{
         data: state.phData,
-        borderColor: "#CE12FF",
+        borderColor: "#3ecfb2",
         borderWidth: 1.5,
         pointRadius: 0,
         tension: 0.3,
-        fill: { target: "origin", above: "#502659" },
+        fill: { target: "origin", above: "rgba(62,207,178,0.04)" },
       }],
     },
     options: {
@@ -217,12 +218,19 @@ const App = (() => {
       ui.valPresence.textContent = "PENDING";
       ui.valPresence.className   = "card-presence not-detected";
       ui.valConf.textContent     = "CV module not yet connected";
+      ui.axolotlIcon.classList.add("hidden");
     } else {
       ui.valPresence.textContent = axolotl_present ? "DETECTED" : "NOT DETECTED";
       ui.valPresence.className   = "card-presence " + (axolotl_present ? "detected" : "not-detected");
       ui.valConf.textContent     = confidence !== null
         ? `Confidence: ${(confidence * 100).toFixed(0)}%`
         : "";
+      // Show icon only when axolotl is present
+      if (axolotl_present) {
+        ui.axolotlIcon.classList.remove("hidden");
+      } else {
+        ui.axolotlIcon.classList.add("hidden");
+      }
     }
 
     // Stats
