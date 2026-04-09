@@ -84,11 +84,11 @@ const App = (() => {
     data: {
       datasets: [{
         data: state.phData,
-        borderColor: "#C94BEB",
+        borderColor: "#CE12FF",
         borderWidth: 1.5,
         pointRadius: 0,
         tension: 0.3,
-        fill: { target: "origin", above: "#9C8746" },
+        fill: { target: "origin", above: "#C94BEB" },
       }],
     },
     options: {
